@@ -155,7 +155,7 @@ const CreateTemplate = () => {
                     rows={15}
                   />
                   <p className="text-xs text-muted-foreground mt-2">
-                    Use {{name}}, {{company}}, {{date}}, {{protocol}} como variáveis para personalização.
+                    Use {"{{name}}"}, {"{{company}}"}, {"{{date}}"}, {"{{protocol}}"} como variáveis para personalização.
                   </p>
                 </CardContent>
               </Card>
@@ -191,10 +191,10 @@ const CreateTemplate = () => {
                   <div className="mt-3 text-sm space-y-2">
                     <p>Você pode usar as seguintes variáveis em seu template:</p>
                     <ul className="list-disc list-inside space-y-1">
-                      <li><code>{{'{{'}}name{{'}}'}}</code> - Nome do destinatário</li>
-                      <li><code>{{'{{'}}company{{'}}'}}</code> - Nome da empresa</li>
-                      <li><code>{{'{{'}}date{{'}}'}}</code> - Data atual</li>
-                      <li><code>{{'{{'}}protocol{{'}}'}}</code> - Número de protocolo</li>
+                      <li><code>{"{{"}"name{"}}"}</code> - Nome do destinatário</li>
+                      <li><code>{"{{"}"company{"}}"}</code> - Nome da empresa</li>
+                      <li><code>{"{{"}"date{"}}"}</code> - Data atual</li>
+                      <li><code>{"{{"}"protocol{"}}"}</code> - Número de protocolo</li>
                     </ul>
                     <p className="mt-4">Você também pode adicionar variáveis personalizadas através do editor de template.</p>
                   </div>
