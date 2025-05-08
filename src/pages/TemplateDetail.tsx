@@ -8,12 +8,20 @@ import { ArrowLeft } from 'lucide-react';
 import { useToast } from '@/components/ui/use-toast';
 import EmailTemplateForm from '@/components/EmailTemplateForm';
 import { Badge } from '@/components/ui/badge';
+import EmailTemplatePreview from '@/components/EmailTemplatePreview';
+import { EmailData } from '@/types/email';
 
 const TemplateDetail = () => {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
   const { toast } = useToast();
   const [generatedHtml, setGeneratedHtml] = useState<string>('');
+  const [previewData, setPreviewData] = useState<EmailData>({
+    name: 'Cliente',
+    company: 'Empresa',
+    date: new Date().toLocaleDateString(),
+    protocol: 'GBT-' + Math.floor(100000 + Math.random() * 900000),
+  });
   
   const template = id ? getTemplateById(id) : undefined;
 
@@ -44,6 +52,10 @@ const TemplateDetail = () => {
     });
   };
 
+  const handleDataUpdate = (data: EmailData) => {
+    setPreviewData(data);
+  };
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
@@ -72,21 +84,13 @@ const TemplateDetail = () => {
                 </p>
               </div>
               
-              <EmailTemplateForm template={template} onGenerate={handleGenerate} />
+              <EmailTemplateForm template={template} onGenerate={handleGenerate} onDataUpdate={handleDataUpdate} />
             </div>
             
             <div className="w-full md:w-1/2 lg:w-5/12">
               <div className="sticky top-8">
                 <h2 className="text-lg font-bold mb-4">Prévia</h2>
-                <div className="rounded-lg border overflow-hidden shadow-sm bg-white">
-                  <div className="border-b bg-muted/50 px-4 py-2 flex items-center justify-between">
-                    <span className="text-sm font-medium">{template.subject}</span>
-                  </div>
-                  <div 
-                    className="p-4 max-h-[500px] overflow-auto" 
-                    dangerouslySetInnerHTML={{ __html: template.content }}
-                  />
-                </div>
+                <EmailTemplatePreview template={template} data={previewData} />
               </div>
             </div>
           </div>

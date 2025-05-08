@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { EmailTemplate, EmailData } from '@/types/email';
+import { Facebook, Twitter, Instagram, Linkedin, Youtube } from 'lucide-react';
 
 interface EmailTemplatePreviewProps {
   template: EmailTemplate;
@@ -35,6 +36,51 @@ const EmailTemplatePreview: React.FC<EmailTemplatePreviewProps> = ({ template, d
     return { __html: content };
   };
 
+  const renderSocialIcons = () => {
+    // Define colors based on footerStyle
+    const iconColor = template.footerStyle === 'white' ? '#000000' : 
+                     template.footerStyle === 'blue' ? '#00B9D1' : '#FFFFFF';
+    
+    const bgColor = template.footerStyle === 'white' ? '#FFFFFF' : 
+                   template.footerStyle === 'blue' ? '#E8F7F9' : '#1A1F2C';
+    
+    const textColor = template.footerStyle === 'white' ? '#1A1F2C' : 
+                     template.footerStyle === 'blue' ? '#00B9D1' : '#FFFFFF';
+
+    return (
+      <div style={{ backgroundColor: bgColor, padding: '20px', textAlign: 'center', borderTop: `1px solid ${template.footerStyle === 'white' ? '#e0e0e0' : 'rgba(255,255,255,0.1)'}` }}>
+        <div style={{ display: 'flex', justifyContent: 'center', gap: '15px', marginBottom: '15px' }}>
+          <a href="https://facebook.com/globooio" style={{ color: iconColor }}>
+            <Facebook size={20} />
+          </a>
+          <a href="https://twitter.com/globooio" style={{ color: iconColor }}>
+            <Twitter size={20} />
+          </a>
+          <a href="https://instagram.com/globooio" style={{ color: iconColor }}>
+            <Instagram size={20} />
+          </a>
+          <a href="https://linkedin.com/company/globooio" style={{ color: iconColor }}>
+            <Linkedin size={20} />
+          </a>
+          <a href="https://youtube.com/globooio" style={{ color: iconColor }}>
+            <Youtube size={20} />
+          </a>
+        </div>
+        <div style={{ color: textColor, fontSize: '12px', marginBottom: '10px' }}>
+          <p style={{ margin: '0 0 8px 0' }}>© 2025 Globoo.io. Todos os direitos reservados.</p>
+          <p style={{ margin: '0 0 8px 0' }}>
+            Dúvidas? Entre em contato: <strong>contato@globoo.io</strong> | <strong>+55 67 98564269</strong>
+          </p>
+          <div style={{ display: 'flex', justifyContent: 'center', gap: '10px', flexWrap: 'wrap' }}>
+            <a href="#" style={{ color: textColor === '#FFFFFF' ? '#7DEFF9' : '#00B9D1', textDecoration: 'none', fontSize: '12px' }}>Termos de Uso</a>
+            <a href="#" style={{ color: textColor === '#FFFFFF' ? '#7DEFF9' : '#00B9D1', textDecoration: 'none', fontSize: '12px' }}>Política de Privacidade</a>
+            <a href="#" style={{ color: textColor === '#FFFFFF' ? '#7DEFF9' : '#00B9D1', textDecoration: 'none', fontSize: '12px' }}>Cancelar Inscrição</a>
+          </div>
+        </div>
+      </div>
+    );
+  };
+
   return (
     <div className="w-full max-w-2xl mx-auto shadow-email rounded-md overflow-hidden">
       <div className="bg-black text-white p-3">
@@ -59,6 +105,7 @@ const EmailTemplatePreview: React.FC<EmailTemplatePreviewProps> = ({ template, d
           className="email-template prose prose-sm max-w-none" 
           dangerouslySetInnerHTML={renderContent()} 
         />
+        {renderSocialIcons()}
       </div>
     </div>
   );

@@ -7,7 +7,15 @@ export interface EmailTemplate {
   category: string;
   content: string;
   imageUrl: string;
-  headerBg?: string; // Adicionando background do cabeçalho
+  headerBg?: string;
+  footerStyle?: 'black' | 'white' | 'blue'; // Footer style option
+  socialLinks?: {
+    facebook?: string;
+    twitter?: string;
+    instagram?: string;
+    linkedin?: string;
+    youtube?: string;
+  };
 }
 
 export interface EmailData {

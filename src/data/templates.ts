@@ -27,13 +27,18 @@ export const emailTemplates: EmailTemplate[] = [
             <p style="font-weight: bold; margin-top: 0;">Equipe de Suporte Globoo.io</p>
           </div>
         </div>
-        <div style="background-color: #f5f5f5; padding: 15px; text-align: center; border-top: 1px solid #e0e0e0;">
-          <p style="color: #8E9196; font-size: 12px; margin: 0;">© 2025 Globoo.io. Todos os direitos reservados.</p>
-        </div>
       </div>
     `,
     imageUrl: "/lovable-uploads/d5bca410-a578-42d4-ab2e-4910f64dfb2e.png",
     headerBg: "#000000",
+    footerStyle: "black",
+    socialLinks: {
+      facebook: "https://facebook.com/globooio",
+      twitter: "https://twitter.com/globooio",
+      instagram: "https://instagram.com/globooio",
+      linkedin: "https://linkedin.com/company/globooio",
+      youtube: "https://youtube.com/globooio"
+    }
   },
   {
     id: "sales-proposal",
@@ -60,13 +65,18 @@ export const emailTemplates: EmailTemplate[] = [
             <p style="font-weight: bold; margin-top: 0;">Equipe Comercial – Globoo.io</p>
           </div>
         </div>
-        <div style="background-color: #f5f5f5; padding: 15px; text-align: center; border-top: 1px solid #e0e0e0;">
-          <p style="color: #8E9196; font-size: 12px; margin: 0;">© 2025 Globoo.io. Todos os direitos reservados.</p>
-        </div>
       </div>
     `,
     imageUrl: "/lovable-uploads/0d29d445-674e-4160-a963-be014d1d5c71.png",
     headerBg: "#000000",
+    footerStyle: "blue",
+    socialLinks: {
+      facebook: "https://facebook.com/globooio",
+      twitter: "https://twitter.com/globooio",
+      instagram: "https://instagram.com/globooio",
+      linkedin: "https://linkedin.com/company/globooio",
+      youtube: "https://youtube.com/globooio"
+    }
   },
   {
     id: "legal-contract",
@@ -93,13 +103,18 @@ export const emailTemplates: EmailTemplate[] = [
             <p style="font-weight: bold; margin-top: 0;">Departamento Jurídico – Globoo.io</p>
           </div>
         </div>
-        <div style="background-color: #f5f5f5; padding: 15px; text-align: center; border-top: 1px solid #e0e0e0;">
-          <p style="color: #8E9196; font-size: 12px; margin: 0;">© 2025 Globoo.io. Todos os direitos reservados.</p>
-        </div>
       </div>
     `,
     imageUrl: "/lovable-uploads/2698f71e-432d-4627-817f-1d8879656013.png",
     headerBg: "#000000",
+    footerStyle: "white",
+    socialLinks: {
+      facebook: "https://facebook.com/globooio",
+      twitter: "https://twitter.com/globooio",
+      instagram: "https://instagram.com/globooio",
+      linkedin: "https://linkedin.com/company/globooio",
+      youtube: "https://youtube.com/globooio"
+    }
   },
   {
     id: "marketing-presentation",
@@ -139,18 +154,18 @@ export const emailTemplates: EmailTemplate[] = [
             <p style="font-weight: bold; margin-top: 0;">Marketing Globoo.io</p>
           </div>
         </div>
-        <div style="background-color: #f5f5f5; padding: 15px; text-align: center; border-top: 1px solid #e0e0e0;">
-          <p style="color: #8E9196; font-size: 12px; margin: 0;">© 2025 Globoo.io. Todos os direitos reservados.</p>
-          <div style="margin-top: 10px;">
-            <a href="#" style="color: #00B9D1; font-size: 12px; text-decoration: none; margin: 0 5px;">Termos de Uso</a>
-            <a href="#" style="color: #00B9D1; font-size: 12px; text-decoration: none; margin: 0 5px;">Política de Privacidade</a>
-            <a href="#" style="color: #00B9D1; font-size: 12px; text-decoration: none; margin: 0 5px;">Preferências de Email</a>
-          </div>
-        </div>
       </div>
     `,
     imageUrl: "/lovable-uploads/f06f0673-51a3-40bc-8fc2-01650f3e4826.png",
     headerBg: "#000000",
+    footerStyle: "blue",
+    socialLinks: {
+      facebook: "https://facebook.com/globooio",
+      twitter: "https://twitter.com/globooio",
+      instagram: "https://instagram.com/globooio",
+      linkedin: "https://linkedin.com/company/globooio",
+      youtube: "https://youtube.com/globooio"
+    }
   },
   {
     id: "tech-support-ticket",
@@ -177,16 +192,18 @@ export const emailTemplates: EmailTemplate[] = [
             <p style="font-weight: bold; margin-top: 0;">Suporte Técnico – Globoo.io</p>
           </div>
         </div>
-        <div style="background-color: #f5f5f5; padding: 15px; text-align: center; border-top: 1px solid #e0e0e0;">
-          <p style="color: #8E9196; font-size: 12px; margin: 0;">© 2025 Globoo.io. Todos os direitos reservados.</p>
-          <p style="color: #8E9196; font-size: 12px; margin-top: 10px;">
-            Caso precise de ajuda, entre em contato pelo <strong>suporte@globoo.io</strong> ou ligue para <strong>0800 123 4567</strong>
-          </p>
-        </div>
       </div>
     `,
     imageUrl: "/lovable-uploads/d5bca410-a578-42d4-ab2e-4910f64dfb2e.png",
     headerBg: "#000000",
+    footerStyle: "black",
+    socialLinks: {
+      facebook: "https://facebook.com/globooio",
+      twitter: "https://twitter.com/globooio",
+      instagram: "https://instagram.com/globooio",
+      linkedin: "https://linkedin.com/company/globooio",
+      youtube: "https://youtube.com/globooio"
+    }
   },
 ];
 
