@@ -7,6 +7,7 @@ export interface EmailTemplate {
   category: string;
   content: string;
   imageUrl: string;
+  headerBg?: string; // Adicionando background do cabeçalho
 }
 
 export interface EmailData {

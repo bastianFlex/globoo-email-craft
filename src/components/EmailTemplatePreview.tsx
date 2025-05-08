@@ -36,28 +36,29 @@ const EmailTemplatePreview: React.FC<EmailTemplatePreviewProps> = ({ template, d
   };
 
   return (
-    <div className="w-full max-w-2xl mx-auto">
-      <div className="border rounded-md p-4 mb-4">
-        <div className="flex flex-col gap-2 mb-4">
+    <div className="w-full max-w-2xl mx-auto shadow-email rounded-md overflow-hidden">
+      <div className="bg-black text-white p-3">
+        <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <span className="text-sm font-medium text-muted-foreground">De:</span>
+            <span className="text-sm font-medium text-gray-300">De:</span>
             <span className="text-sm">Globoo.io &lt;contato@globoo.io&gt;</span>
           </div>
-          <div className="flex items-center gap-2">
-            <span className="text-sm font-medium text-muted-foreground">Para:</span>
-            <span className="text-sm">{data.name || 'Cliente'} &lt;cliente@exemplo.com&gt;</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <span className="text-sm font-medium text-muted-foreground">Assunto:</span>
-            <span className="text-sm font-semibold">{template.subject}</span>
-          </div>
+          <span className="text-xs text-gray-400">{new Date().toLocaleString()}</span>
         </div>
-        <div className="border-t pt-4">
-          <div 
-            className="email-template prose prose-sm max-w-none" 
-            dangerouslySetInnerHTML={renderContent()} 
-          />
+        <div className="flex items-center gap-2 mt-2">
+          <span className="text-sm font-medium text-gray-300">Para:</span>
+          <span className="text-sm">{data.name || 'Cliente'} &lt;cliente@exemplo.com&gt;</span>
         </div>
+        <div className="flex items-center gap-2 mt-2">
+          <span className="text-sm font-medium text-gray-300">Assunto:</span>
+          <span className="text-sm font-semibold text-globoo-light">{template.subject}</span>
+        </div>
+      </div>
+      <div className="bg-white">
+        <div 
+          className="email-template prose prose-sm max-w-none" 
+          dangerouslySetInnerHTML={renderContent()} 
+        />
       </div>
     </div>
   );

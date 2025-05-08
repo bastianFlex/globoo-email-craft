@@ -39,11 +39,11 @@ const EmailTemplateCard: React.FC<EmailTemplateCardProps> = ({
 
   return (
     <Card className="overflow-hidden template-preview">
-      <div className="h-48 overflow-hidden bg-gray-100">
+      <div className="h-32 bg-black flex items-center justify-center">
         <img
           src={imageUrl}
           alt={title}
-          className="w-full h-full object-cover"
+          className="h-20 object-contain"
         />
       </div>
       <CardContent className="pt-4">
